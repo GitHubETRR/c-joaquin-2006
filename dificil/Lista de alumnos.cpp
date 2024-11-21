@@ -2,7 +2,6 @@
 #include <vector>
 #include <string>
 
-// Clase que representa a un Alumno
 class Alumno {
 private:
     std::string nombre;
@@ -11,24 +10,20 @@ private:
     float calificacionTotal;
 
 public:
-    // Constructor
     Alumno(std::string _nombre, int _edad, int _anio, float _calificacionTotal)
         : nombre(_nombre), edad(_edad), anio(_anio), calificacionTotal(_calificacionTotal) {}
 
-    // Métodos para obtener los datos del alumno
     std::string getNombre() const { return nombre; }
     int getEdad() const { return edad; }
     int getAnio() const { return anio; }
     float getCalificacionTotal() const { return calificacionTotal; }
 
-    // Método para mostrar los datos del alumno
     void mostrarInformacion() const {
         std::cout << "Nombre: " << nombre << ", Edad: " << edad
                   << ", Año: " << anio << ", Calificación Total: " << calificacionTotal << std::endl;
     }
 };
 
-// Función para ingresar la información de un alumno
 Alumno ingresarAlumno(int num) {
     std::string nombre;
     int edad;
