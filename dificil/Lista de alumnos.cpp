@@ -50,14 +50,12 @@ int main() {
     const int numAlumnos = 2;
     std::vector<Alumno> listaAlumnos;
 
-    // Ingresar información para 10 alumnos
     for (int i = 0; i < numAlumnos; ++i) {
         std::cout << "\n--- Ingresar información para el alumno " << (i + 1) << " ---\n";
         Alumno alumno = ingresarAlumno(i + 1);
         listaAlumnos.push_back(alumno);
     }
 
-    // Mostrar información de todos los alumnos
     std::cout << "\n--- Información de los alumnos ---\n";
     for (const Alumno& alumno : listaAlumnos) {
         alumno.mostrarInformacion();
